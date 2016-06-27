@@ -24,7 +24,7 @@ console.log("hello");
             <TodoListItem rmItem={self.removeItem} >{itemText}</TodoListItem>
           );
       };
-      return <ul className="list-group">{this.props.items.map(createItem)}</ul>;
+      return<ul className="list-group">{this.props.items.map(createItem)}</ul>;
       }
     });
 
@@ -36,12 +36,11 @@ console.log("hello");
         },
       render: function(){
         return (
-          <li className="{list-group-item}">{this.props.children}
-            <form onSubmit={this.delete}>
-                    <button>&times;</button>
+                <li className="list-group-item">{this.props.children}
+                <form onSubmit={this.delete} >
+                    <button className="btn-xs">&times;</button>
                 </form>
-            
-            </li>
+                </li>
         );
       }
     });
