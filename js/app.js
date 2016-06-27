@@ -37,9 +37,7 @@ console.log("hello");
       render: function(){
         return (
                 <li className="list-group-item">{this.props.children}
-                <form onSubmit={this.delete} >
-                    <button className="btn-xs">&times;</button>
-                </form>
+                <button className="btn-xs" onClick={this.delete}>&times;</button>
                 </li>
         );
       }
